@@ -21,7 +21,7 @@ const typeDefs = gql`
     deleteTodo(id: ID!): Boolean!
   }
 
-  input RegiserInput {
+  input RegisterInput {
     email: String!
     password: String!
     name: String!
@@ -34,7 +34,7 @@ const typeDefs = gql`
 
   type AuthUser {
     user: User!
-    token: string!
+    token: String!
   }
 
   type User {
@@ -61,3 +61,4 @@ const typeDefs = gql`
     taskList: TaskList!
   }
 `;
+export default typeDefs;
