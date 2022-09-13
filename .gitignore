@@ -1,0 +1,11 @@
+node_modules
+.vercel
+.dbdata
+tmp
+dist
+src/api/.env
+src/api/data/images/
+.env
+.DS_Store
+.data
+src/api/.env.production
