@@ -6,6 +6,12 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
+import LoginScreen from '../screens/LoginScreen';
+import NotFoundScreen from '../screens/NotFoundScreen';
+import ProjectsScreen from '../screens/ProjectsScreen';
+import RegisterScreen from '../screens/RegisterScreen';
+import SplashScreen from '../screens/SplashScreen';
+import TodoScreen from '../screens/TodoScreen';
 import { RootStackParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
