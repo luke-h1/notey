@@ -38,3 +38,20 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
     BottomTabScreenProps<RootTabParamList, Screen>,
     NativeStackScreenProps<RootStackParamList>
   >;
+
+export interface Project {
+  id: number;
+  title: string;
+  createdAt: string;
+}
+
+export interface Todo {
+  id: number;
+  content: string;
+  completed: boolean;
+}
+
+export interface User {
+  name: string;
+  email: string;
+}

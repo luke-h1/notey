@@ -13,11 +13,10 @@ const typeDefs = gql`
     createTaskList(title: String!): TaskList!
     updateTaskList(id: ID!, title: String!): TaskList!
     deleteTaskList(id: ID!): Boolean!
-
-    addUserToTaskList(taskListId: ID!, userId: ID!): TaskList!
+    addUserToTaskList(taskListId: ID!, userId: ID!): TaskList
 
     createTodo(content: String!, taskListId: ID!): Todo!
-    updateTodo(id: ID!, content: String, completed: Boolean): Todo!
+    updateTodo(id: ID!, content: String, isCompleted: Boolean): Todo!
     deleteTodo(id: ID!): Boolean!
   }
 
@@ -25,6 +24,7 @@ const typeDefs = gql`
     email: String!
     password: String!
     name: String!
+    avatar: String
   }
 
   input LoginInput {
@@ -41,17 +41,17 @@ const typeDefs = gql`
     id: ID!
     name: String!
     email: String!
+    avatar: String
   }
 
   type TaskList {
     id: ID!
+    createdAt: String!
     title: String!
     progress: Float!
 
     users: [User!]!
-    todos: [Todo]!
-
-    createdAt: String!
+    todos: [Todo!]!
   }
 
   type Todo {
@@ -61,4 +61,5 @@ const typeDefs = gql`
     taskList: TaskList!
   }
 `;
+
 export default typeDefs;
